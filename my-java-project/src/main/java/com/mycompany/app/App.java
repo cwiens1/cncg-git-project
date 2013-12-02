@@ -1,11 +1,15 @@
 package com.mycompany.app;
 
+import java.util.logging.Logger;
+
 /**
  * My Subversion Test App
  *
  */
-public class App 
-{
+public class App  {
+	
+	private static final Logger LOGGER = Logger.getLogger(App.class.getName());
+	
 	private String name;
 	
 	public App (String name) {
@@ -25,10 +29,9 @@ public class App
 	}
 	
 	
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
 		App app = new App("My Subversion Test App");
 		
-        System.out.println( app.sayMyName() );
+		LOGGER.info( app.sayMyName() );
     }
 }
